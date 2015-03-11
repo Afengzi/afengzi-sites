@@ -50,9 +50,9 @@ public class UserManagerReidsImpl implements UserManager {
         }
         result.put("success", false);
         if (user.getEmail().equals(dbUser.getEmail())) {
-            result.put("message", "邮箱已存在");
+            result.put("message", "the email had exist.");
             if (user.getUserName().equals(dbUser.getUserName())) {
-                result.put("message", "邮箱和用户名已存在");
+                result.put("message", "the email and user had exist.");
             }
         } else if (user.getUserName().equals(dbUser.getUserName())) {
             result.put("message", "用户名已存在");
