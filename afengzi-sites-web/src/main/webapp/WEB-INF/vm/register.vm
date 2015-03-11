@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>test sites by spring mvc</title>
+</head>
+<body>
+<form action="/user/register.do" method="post">
+    <table align="center">
+        <tr>
+            <td>username</td>
+            <td><input name="username" type="text"/></td>
+        </tr>
+        <tr>
+            <td>email</td>
+            <td><input name="email" type="text"/></td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td><input name="password" type="text"/></td>
+        </tr>
+        <tr>
+            <td><input name="submit" value="submit" type="submit" /></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

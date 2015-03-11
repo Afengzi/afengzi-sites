@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>afengzi-sites</artifactId>
+        <groupId>afengzi-sites</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>afengzi-sites-manager</artifactId>
+    <groupId>com.afengzi.sites</groupId>
+    <name>afengzi-sites-manager</name>
+    <version>1.0-SNAPSHOT</version>
+    <url>http://afengzi.sites.com</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.afengzi.sites</groupId>
+            <artifactId>afengzi-sites-domain</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.afengzi.sites</groupId>
+            <artifactId>afengzi-sites-util</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>1.4.1.RELEASE</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-core</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.6.2</version>
+        </dependency>
+
+
+
+    </dependencies>
+</project>

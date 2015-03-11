@@ -1,0 +1,10 @@
+<div style="font-size: 20">
+    <ul id="tt" class="easyui-tree"
+        url="getDirectory.do"
+        ondblclick="openWebsites()"
+        method="get"></ul>
+</div>
+
+<div style="margin-bottom:10px;">
+    <a href="#" onclick="appendnodes()">append nodes</a>
+</div>

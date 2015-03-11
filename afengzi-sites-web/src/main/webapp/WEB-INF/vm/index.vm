@@ -1,0 +1,25 @@
+#set($title="esay ui test")
+#set($layout="/layout/website-layout.vm")
+
+#parse("/css/web_site_css.vm")
+#parse("/js/site.vm")
+
+<table align=center>
+    #foreach($rowWebsite in $websites)
+        <tr class="website_area_frame website_font">
+            #foreach($website in $rowWebsite)
+                <td align=center class="website_area_frame website_font website_row" >
+                    <a href="$!website.href" target="_blank">$!website.title</a>
+                    <p>$!website.description</p>
+                </td>
+            #end
+
+        </tr>
+    #end
+</table>
+
+
+
+
+
+

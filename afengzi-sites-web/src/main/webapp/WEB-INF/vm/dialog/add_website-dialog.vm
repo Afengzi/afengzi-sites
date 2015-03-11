@@ -1,0 +1,40 @@
+<div id="add_website-dialog" title="add-site" class="easyui-dialog" style="width: 400px; height: 280px; padding: 10px 20px;"
+     closed="true" buttons="#websiet-buttons">
+
+    <form id="fm" method="post">
+        <div class="fitem">
+            <label>
+                site-title
+            </label>
+            <input id="site_title" class="easyui-validatebox" required="true"/>
+        </div>
+        <div class="fitem">
+            <label>
+                site-url
+            </label>
+            <input id="site_url" class="easyui-validatebox" required="true"/>
+        </div>
+        <div class="fitem">
+            <label>
+                site-description
+            </label>
+            <input id="site_des" class="easyui-validatebox" required="true"/>
+        </div>
+        <div class="fitem">
+            <label>
+                site-directory
+            </label>
+            <select id="site-directory" class="easyui-validatebox" required="true">
+
+                <option value="all">all</option>
+            </select>
+        </div>
+
+    </form>
+</div>
+
+<div id="websiet-buttons">
+    <a href="javascript:void(0)" class="easyui-linkbutton" onclick="addSite()" iconcls="icon-save">ok</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:$('#add_website-dialog').dialog('close')"
+       iconcls="icon-cancel">cancel</a>
+</div>

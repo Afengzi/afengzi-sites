@@ -1,0 +1,15 @@
+#set($title="esay ui test")
+#set($layout="/layout/website-layout.vm")
+<input type="button" onclick="return showDg()"/>
+<div id="dg"></div>
+<script type="text/javascript">
+    function showDg() {
+        jQuery('#dg').dialog({
+            title: "login",
+            width: 400px,
+            height: 300px,
+            collapsible: true,
+            modal: false
+        });
+    }
+</script>

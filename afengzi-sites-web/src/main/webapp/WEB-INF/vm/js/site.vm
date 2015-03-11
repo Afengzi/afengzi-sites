@@ -1,0 +1,75 @@
+<script type="text/javascript">
+    function showAddWebsite() {
+        initDirectory("site-directory");
+        jQuery("#add_website-dialog").dialog("open");
+    };
+
+    function initDirectory(selectId) {
+        jQuery.getJSON("site/directory.do", function (data) {
+            var tt = "";
+            jQuery.each(data, function (k, v) {
+                jQuery("#"+selectId).append("<option value="+v+">"+k+"</option>")
+            })
+        });
+
+    }
+
+
+    function addSite() {
+        var stitle = jQuery("#site_title").val();
+        var surl = jQuery("#site_url").val();
+        var sdesc = jQuery("#site_des").val();
+        alert(stitle);
+        jQuery.post("http://sites.afengzi.com/site/addSite.do",
+                {
+                    title: stitle,
+                    url: surl,
+                    description: sdesc
+                },
+                function (data, status) {
+                    alert("data : " + data)
+                    alert("Data: " + data + "\nStatus: " + status);
+                    location.reload();
+                });
+        jQuery('#add-dialog').dialog('close');
+
+    }
+
+    function appendnodes() {
+        var node = jQuery('#tt').tree('getSelected');
+        alert("node");
+        alert("node id : " + node.id);
+        if (node) {
+            var nodes = [
+                {
+                    "id": 13,
+                    "text": "Raspberry"
+                },
+                {
+                    "id": 14,
+                    "text": "Cantaloupe"
+                }
+            ];
+            $('#tt2').tree('append', {
+                parent: node.target,
+                data: nodes
+            });
+        }
+    }
+
+    function openWebsites() {
+        alert("openWebsites");
+        var node = jQuery('#tt').tree('getSelected');
+        alert("node id : " + node.id);
+        location.href = "index.do?direId=" + node.id;
+    }
+    function showAddDire() {
+        initDirectory("parent-directory");
+        jQuery("#add_directory-dialog").dialog("open");
+    };
+    function addDirectory(){
+        alert("addDirectory");
+    }
+
+
+</script>

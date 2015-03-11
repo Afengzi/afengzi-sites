@@ -1,0 +1,29 @@
+<div id="add_directory-dialog" title="add-site" class="easyui-dialog"
+     style="width: 400px; height: 280px; padding: 10px 20px;"
+     closed="true" buttons="#dire-buttons">
+
+    <form id="dire" method="post">
+        <div class="fitem">
+            <label>
+                directory-title
+            </label>
+            <input id="directory_title" class="easyui-validatebox" required="true"/>
+        </div>
+        <div class="fitem">
+            <label>
+                parent-directory
+            </label>
+            <select id="parent-directory" class="easyui-validatebox" required="true">
+                <option value="all">all</option>
+            </select>
+        </div>
+
+    </form>
+</div>
+
+<div id="dire-buttons">
+    <a href="javascript:void(0)" class="easyui-linkbutton" onclick="addDirectory()" iconcls="icon-save">ok</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton"
+       onclick="javascript:$('#add_directory-dialog').dialog('close')"
+       iconcls="icon-cancel">cancel</a>
+</div>

@@ -1,0 +1,8 @@
+<input type="submit" value="add_directory" onclick="showAddDire()"/>
+<input type="submit" value="add_website" onclick="showAddWebsite()"/>
+#parse("/dialog/add_directory-dialog.vm")
+#parse("/dialog/add_website-dialog.vm")
+
+
+
+
